@@ -1,6 +1,6 @@
 # Codex Game Studios
 
-[English](README.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+[Multilingual website](https://dustsaint.github.io/codex-game-studios/)
 
 ![Codex Game Studios banner](assets/branding/codex-game-studios-banner-minimal.png)
 
