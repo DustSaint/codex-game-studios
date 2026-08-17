@@ -30,16 +30,20 @@ For broad game-development work, call the coordinator explicitly:
 $codex-game-studios:manage-game-development
 ```
 
-You can also call a focused skill directly, for example:
+### 常用调用
 
-```text
-$codex-game-studios:brainstorm-game-concept
-$codex-game-studios:design-game-feature
-$codex-game-studios:write-game-technical-design
-$codex-game-studios:implement-game-feature
-$codex-game-studios:plan-game-qa
-$codex-game-studios:analyze-game-playtests
-```
+| 调用 | 用途 |
+| --- | --- |
+| `$codex-game-studios:brainstorm-game-concept` | 游戏创意 |
+| `$codex-game-studios:design-game` | 整体玩法与系统设计 |
+| `$codex-game-studios:design-game-feature` | 单个功能规格 |
+| `$codex-game-studios:write-game-technical-design` | 技术方案与架构 |
+| `$codex-game-studios:implement-game-feature` | 实现功能 |
+| `$codex-game-studios:review-game-design` | 评审设计 |
+| `$codex-game-studios:review-game-code` | 评审代码 |
+| `$codex-game-studios:plan-game-qa` | 测试计划 |
+| `$codex-game-studios:analyze-game-playtests` | 分析试玩反馈 |
+| `$codex-game-studios:plan-game-production` | 里程碑与制作计划 |
 
 Natural-language requests can trigger the matching skill automatically when its
 scope is clear.
