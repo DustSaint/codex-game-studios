@@ -38,6 +38,17 @@ export const content = {
       "A behavior-first framework for turning game ideas into traceable designs, implementations, reviews, QA evidence, playtest learning, and production plans.",
     intro:
       "Adapted from claude-code-game-studios, this plugin removes Claude-specific roles, model tiers, hooks, and command handoffs while preserving the useful game-development lifecycle and evidence discipline.",
+    advantagesTitle: "Features and advantages",
+    advantagesLead:
+      "A practical game-development system for Codex: focused enough for one task, structured enough to carry a project from concept to release planning.",
+    advantages: [
+      ["Codex-native", "Built around Codex Skills, project evidence, and explicit authorization instead of carrying over Claude-specific runtime machinery."],
+      ["Complete lifecycle", "Covers ideation, design, technical planning, implementation, review, QA, playtest analysis, and production planning."],
+      ["Evidence before claims", "Keeps assumptions, verified facts, and NOT RUN checks distinct so untested work is never presented as complete."],
+      ["Engine-aware", "Detects Unity, Unreal Engine, or Godot project evidence and loads one matching adapter; browser work follows its official specialized workflow."],
+      ["Focused or coordinated", "Use one precise Skill for a bounded task, or the coordinator to connect several stages without losing decisions and acceptance criteria."],
+      ["Safe by default", "Read-only reviews stay read-only, while commits, deployments, releases, and other external changes require clear user authorization."],
+    ],
     startLabel: "Install the plugin",
     repositoryLabel: "Explore the repository",
     installTitle: "Install",
@@ -45,9 +56,22 @@ export const content = {
     marketplaceCommand: "Add marketplace",
     pluginCommand: "Install plugin",
     installNote: "Start a new Codex task after installation so the new Skills are discovered.",
-    useTitle: "Use",
+    useTitle: "How to use",
     useLead:
-      "Call the coordinator for broad game-development work, or invoke a focused Skill for a bounded task.",
+      "Describe the outcome in natural language and add the Skill name when you want explicit routing. Give Codex the project context, constraints, and definition of done.",
+    workflowSteps: [
+      ["Open the right project", "Start a new Codex task in the game repository or attach the relevant design, code, logs, screenshots, or playtest evidence."],
+      ["Choose the scope", "Use the coordinator for multi-stage work. For one contained deliverable, call the focused Skill listed below."],
+      ["State the brief", "Explain the desired outcome, target engine and platform, constraints, existing evidence, and acceptance criteria."],
+      ["Review and authorize", "Check the proposed plan or result. Explicitly authorize implementation, commits, deployment, or release only when you want those actions performed."],
+    ],
+    examplesTitle: "Example requests",
+    examplesLead: "Copy the pattern, then replace the project details with your own.",
+    usageExamples: [
+      ["Full workflow", "$codex-game-studios:manage-game-development", "Plan an inventory feature for this Unity project, write its technical design, implement the smallest vertical slice, and prepare evidence-based QA checks."],
+      ["Focused design", "$codex-game-studios:design-game-feature", "Design a stamina system for a third-person action game. Include player decisions, tuning variables, edge cases, and acceptance criteria."],
+      ["Review and QA", "$codex-game-studios:review-game-code", "Review the save-system changes in this branch. Prioritize correctness and data-loss risks, cite exact files, and separate verified findings from checks that were not run."],
+    ],
     coordinatorCommand: "Coordinate a full workflow",
     skillsTitle: "Focused Skills",
     commandHeading: "Invocation",
@@ -108,6 +132,16 @@ export const content = {
       "从游戏创意出发，形成可追溯的设计、实现、评审、QA 证据、试玩结论和制作计划。",
     intro:
       "本插件从 claude-code-game-studios 迁移而来，删除 Claude 特有的角色体系、模型分级、钩子和命令交接，同时保留有价值的游戏开发生命周期与证据纪律。",
+    advantagesTitle: "特色与优势",
+    advantagesLead: "面向 Codex 的实用游戏开发体系：既能处理一个边界明确的任务，也能让项目从创意持续推进到发布规划。",
+    advantages: [
+      ["Codex 原生", "围绕 Codex Skill、项目证据和明确授权设计，不保留 Claude 特有的运行时结构。"],
+      ["覆盖完整生命周期", "涵盖创意、玩法设计、技术方案、实现、评审、QA、试玩分析和制作规划。"],
+      ["证据先于结论", "明确区分假设、已验证事实和 NOT RUN 检查，不会把未经测试的工作说成已完成。"],
+      ["理解引擎上下文", "根据项目证据识别 Unity、Unreal Engine 或 Godot 并加载一个匹配适配器；浏览器游戏交给官方专用工作流。"],
+      ["既可专注也可协同", "边界明确时直接调用一个专用 Skill；跨阶段任务由总协调入口串联，同时保留决策和验收标准。"],
+      ["默认安全", "只读评审保持只读；提交、部署、发布及其他外部变更必须先取得用户明确授权。"],
+    ],
     startLabel: "安装插件",
     repositoryLabel: "浏览仓库",
     installTitle: "安装",
@@ -115,8 +149,21 @@ export const content = {
     marketplaceCommand: "添加插件市场",
     pluginCommand: "安装插件",
     installNote: "安装完成后请开启新的 Codex 任务，以便发现新安装的 Skill。",
-    useTitle: "使用",
-    useLead: "范围较广的游戏开发任务使用总协调入口；边界明确的任务可以直接调用专用 Skill。",
+    useTitle: "如何使用",
+    useLead: "用自然语言说明目标；需要明确指定路线时，再加上 Skill 名称。同时提供项目背景、限制条件和完成标准。",
+    workflowSteps: [
+      ["打开正确的项目", "在游戏仓库中开启新的 Codex 任务，或附上相关设计、代码、日志、截图和试玩证据。"],
+      ["选择任务范围", "跨多个开发阶段时使用总协调入口；只有一个明确交付物时，直接调用下方专用 Skill。"],
+      ["写清任务简报", "说明期望结果、目标引擎与平台、限制条件、已有证据和验收标准。"],
+      ["评审并授权", "先检查方案或结果。只有确实希望执行时，才明确授权实现、提交、部署或发布。"],
+    ],
+    examplesTitle: "使用示例",
+    examplesLead: "可以照着以下格式编写，再替换成自己的项目细节。",
+    usageExamples: [
+      ["完整工作流", "$codex-game-studios:manage-game-development", "为这个 Unity 项目规划背包功能，编写技术设计，实现最小垂直切片，并准备基于证据的 QA 检查。"],
+      ["专注功能设计", "$codex-game-studios:design-game-feature", "为第三人称动作游戏设计体力系统，包含玩家决策、调参变量、边界情况和验收标准。"],
+      ["代码评审与 QA", "$codex-game-studios:review-game-code", "评审当前分支的存档系统改动，优先检查正确性和数据丢失风险，引用准确文件，并区分已验证结论与未运行检查。"],
+    ],
     coordinatorCommand: "协调完整工作流",
     skillsTitle: "专用 Skill",
     commandHeading: "调用",
@@ -170,6 +217,17 @@ export const content = {
       "Превращает игровые идеи в проверяемые дизайны, реализации, ревью, QA-доказательства, выводы плейтестов и производственные планы.",
     intro:
       "Плагин адаптирован из claude-code-game-studios: специфичные для Claude роли, уровни моделей, хуки и передача команд удалены, а полезный жизненный цикл разработки и дисциплина доказательств сохранены.",
+    advantagesTitle: "Особенности и преимущества",
+    advantagesLead:
+      "Практичная система разработки игр для Codex: достаточно точная для отдельной задачи и достаточно структурированная, чтобы вести проект от концепции до планирования релиза.",
+    advantages: [
+      ["Нативность для Codex", "Построена вокруг Codex Skills, данных проекта и явных разрешений без специфичной для Claude инфраструктуры выполнения."],
+      ["Полный жизненный цикл", "Охватывает идеи, дизайн, техническое планирование, реализацию, ревью, QA, анализ плейтестов и планирование производства."],
+      ["Сначала доказательства", "Разделяет предположения, проверенные факты и проверки NOT RUN, поэтому непроверенная работа не выдаётся за завершённую."],
+      ["Учёт движка", "По данным проекта определяет Unity, Unreal Engine или Godot и загружает один подходящий адаптер; браузерная разработка передаётся официальному специализированному процессу."],
+      ["Фокус или координация", "Используйте один точный Skill для ограниченной задачи или координатор для связи нескольких этапов с сохранением решений и критериев приёмки."],
+      ["Безопасность по умолчанию", "Ревью остаются только для чтения, а commit, развёртывание, релиз и другие внешние изменения требуют явного разрешения пользователя."],
+    ],
     startLabel: "Установить плагин",
     repositoryLabel: "Открыть репозиторий",
     installTitle: "Установка",
@@ -177,8 +235,21 @@ export const content = {
     marketplaceCommand: "Добавить маркетплейс",
     pluginCommand: "Установить плагин",
     installNote: "После установки начните новую задачу Codex, чтобы новые Skill были обнаружены.",
-    useTitle: "Использование",
-    useLead: "Для широких задач вызывайте координатор, а для ограниченной задачи — специализированный Skill.",
+    useTitle: "Как использовать",
+    useLead: "Опишите результат обычным языком и добавьте имя Skill, если нужен явный маршрут. Укажите контекст проекта, ограничения и критерии готовности.",
+    workflowSteps: [
+      ["Откройте нужный проект", "Начните новую задачу Codex в игровом репозитории или приложите соответствующий дизайн, код, логи, снимки экрана и данные плейтестов."],
+      ["Выберите масштаб", "Для многоэтапной работы используйте координатор. Для одного чёткого результата вызовите специализированный Skill из списка ниже."],
+      ["Сформулируйте задачу", "Опишите желаемый результат, целевой движок и платформу, ограничения, имеющиеся доказательства и критерии приёмки."],
+      ["Проверьте и разрешите", "Проверьте план или результат. Явно разрешайте реализацию, commit, развёртывание или релиз только тогда, когда хотите выполнить эти действия."],
+    ],
+    examplesTitle: "Примеры запросов",
+    examplesLead: "Используйте эти шаблоны и замените сведения о проекте своими.",
+    usageExamples: [
+      ["Полный процесс", "$codex-game-studios:manage-game-development", "Спланируй систему инвентаря для этого проекта Unity, подготовь технический дизайн, реализуй минимальный вертикальный срез и составь QA-проверки с доказательствами."],
+      ["Дизайн функции", "$codex-game-studios:design-game-feature", "Спроектируй систему выносливости для экшена от третьего лица. Включи решения игрока, параметры баланса, граничные случаи и критерии приёмки."],
+      ["Ревью и QA", "$codex-game-studios:review-game-code", "Проведи ревью изменений системы сохранений в этой ветке. Сначала проверь корректность и риск потери данных, укажи точные файлы и отдели подтверждённые выводы от невыполненных проверок."],
+    ],
     coordinatorCommand: "Координация полного процесса",
     skillsTitle: "Специализированные Skill",
     commandHeading: "Вызов",
@@ -232,6 +303,17 @@ export const content = {
       "Verwandelt Spielideen in nachvollziehbare Designs, Implementierungen, Reviews, QA-Evidenz, Playtest-Erkenntnisse und Produktionspläne.",
     intro:
       "Das Plugin wurde aus claude-code-game-studios adaptiert. Claude-spezifische Rollen, Modellstufen, Hooks und Kommandoübergaben wurden entfernt, während der nützliche Entwicklungszyklus und die Evidenzdisziplin erhalten blieben.",
+    advantagesTitle: "Merkmale und Vorteile",
+    advantagesLead:
+      "Ein praxistaugliches Spieleentwicklungssystem für Codex: fokussiert genug für eine einzelne Aufgabe und strukturiert genug, um ein Projekt von der Idee bis zur Release-Planung zu begleiten.",
+    advantages: [
+      ["Codex-nativ", "Basiert auf Codex Skills, Projektnachweisen und ausdrücklicher Freigabe, ohne Claude-spezifische Laufzeitmechanik zu übernehmen."],
+      ["Vollständiger Lebenszyklus", "Deckt Ideenfindung, Design, technische Planung, Implementierung, Reviews, QA, Playtest-Analyse und Produktionsplanung ab."],
+      ["Evidenz vor Behauptungen", "Trennt Annahmen, bestätigte Fakten und NOT-RUN-Prüfungen, damit ungeprüfte Arbeit nie als abgeschlossen dargestellt wird."],
+      ["Engine-bewusst", "Erkennt Unity-, Unreal-Engine- oder Godot-Projektnachweise und lädt genau einen passenden Adapter; Browser-Arbeit folgt dem offiziellen Spezialablauf."],
+      ["Fokussiert oder koordiniert", "Nutze einen präzisen Skill für eine begrenzte Aufgabe oder den Koordinator, um mehrere Phasen mit erhaltenen Entscheidungen und Abnahmekriterien zu verbinden."],
+      ["Standardmäßig sicher", "Nur-Lese-Reviews bleiben unverändert; Commits, Deployments, Releases und andere externe Änderungen erfordern eine klare Freigabe."],
+    ],
     startLabel: "Plugin installieren",
     repositoryLabel: "Repository öffnen",
     installTitle: "Installation",
@@ -239,8 +321,21 @@ export const content = {
     marketplaceCommand: "Marketplace hinzufügen",
     pluginCommand: "Plugin installieren",
     installNote: "Starte nach der Installation eine neue Codex-Aufgabe, damit die neuen Skills erkannt werden.",
-    useTitle: "Verwendung",
-    useLead: "Nutze den Koordinator für umfangreiche Entwicklungsarbeit oder einen spezialisierten Skill für eine klar begrenzte Aufgabe.",
+    useTitle: "So verwendest du das Plugin",
+    useLead: "Beschreibe das gewünschte Ergebnis in natürlicher Sprache und ergänze den Skill-Namen, wenn du eine eindeutige Zuordnung möchtest. Nenne Projektkontext, Einschränkungen und Definition of Done.",
+    workflowSteps: [
+      ["Öffne das richtige Projekt", "Starte eine neue Codex-Aufgabe im Spiele-Repository oder füge relevante Designs, Code, Logs, Screenshots und Playtest-Evidenz bei."],
+      ["Bestimme den Umfang", "Nutze den Koordinator für mehrstufige Arbeit. Für ein klar begrenztes Ergebnis rufst du einen spezialisierten Skill aus der Liste auf."],
+      ["Formuliere das Briefing", "Beschreibe Ziel, Engine und Plattform, Einschränkungen, vorhandene Evidenz und Abnahmekriterien."],
+      ["Prüfe und autorisiere", "Prüfe Plan oder Ergebnis. Autorisiere Implementierung, Commit, Deployment oder Release nur ausdrücklich, wenn diese Aktionen ausgeführt werden sollen."],
+    ],
+    examplesTitle: "Beispielanfragen",
+    examplesLead: "Übernimm das Muster und ersetze die Projektdetails durch deine eigenen.",
+    usageExamples: [
+      ["Kompletter Ablauf", "$codex-game-studios:manage-game-development", "Plane ein Inventar-Feature für dieses Unity-Projekt, schreibe das technische Design, implementiere einen minimalen Vertical Slice und erstelle evidenzbasierte QA-Prüfungen."],
+      ["Fokussiertes Design", "$codex-game-studios:design-game-feature", "Entwirf ein Ausdauersystem für ein Third-Person-Actionspiel. Berücksichtige Spielerentscheidungen, Tuning-Variablen, Grenzfälle und Abnahmekriterien."],
+      ["Review und QA", "$codex-game-studios:review-game-code", "Prüfe die Änderungen am Speichersystem in diesem Branch. Priorisiere Korrektheit und Datenverlustrisiken, nenne genaue Dateien und trenne bestätigte Ergebnisse von nicht ausgeführten Prüfungen."],
+    ],
     coordinatorCommand: "Vollständigen Ablauf koordinieren",
     skillsTitle: "Spezialisierte Skills",
     commandHeading: "Aufruf",
@@ -294,6 +389,17 @@ export const content = {
       "ゲームのアイデアを、追跡可能な設計、実装、レビュー、QA エビデンス、プレイテストの学び、制作計画へつなげます。",
     intro:
       "claude-code-game-studios を基に再構築し、Claude 固有のロール、モデル階層、フック、コマンド引き継ぎを削除しました。有用な開発ライフサイクルとエビデンス規律は維持しています。",
+    advantagesTitle: "特徴とメリット",
+    advantagesLead:
+      "Codex のための実用的なゲーム開発システムです。単一タスクには十分に集中でき、コンセプトからリリース計画までプロジェクトを支える構造も備えています。",
+    advantages: [
+      ["Codex ネイティブ", "Claude 固有の実行機構を残さず、Codex Skills、プロジェクトのエビデンス、明示的な許可を中心に設計しています。"],
+      ["開発ライフサイクル全体", "アイデア、設計、技術計画、実装、レビュー、QA、プレイテスト分析、制作計画を一貫して扱います。"],
+      ["主張よりエビデンス", "仮定、検証済みの事実、NOT RUN の確認事項を分け、未検証の作業を完了済みとして扱いません。"],
+      ["エンジンを認識", "プロジェクトの情報から Unity、Unreal Engine、Godot を判定して 1 つの適切なアダプターを読み込み、ブラウザ開発は公式の専門フローへ渡します。"],
+      ["集中と連携の両立", "限定された作業には 1 つの専門 Skill、複数工程にはコーディネーターを使い、判断と受け入れ基準を維持します。"],
+      ["安全な初期動作", "読み取り専用レビューは変更を加えず、Commit、デプロイ、リリースなどの外部変更には明示的な許可を求めます。"],
+    ],
     startLabel: "プラグインをインストール",
     repositoryLabel: "リポジトリを見る",
     installTitle: "インストール",
@@ -302,7 +408,20 @@ export const content = {
     pluginCommand: "プラグインをインストール",
     installNote: "インストール後、新しい Skill を認識させるために新しい Codex タスクを開始してください。",
     useTitle: "使い方",
-    useLead: "範囲の広い開発作業にはコーディネーターを使い、明確に限定された作業には専門 Skill を直接使います。",
+    useLead: "目的を自然言語で説明し、経路を明示したい場合は Skill 名を加えます。プロジェクトの背景、制約、完了条件も伝えてください。",
+    workflowSteps: [
+      ["適切なプロジェクトを開く", "ゲームのリポジトリで新しい Codex タスクを開始するか、関連する設計、コード、ログ、スクリーンショット、プレイテストのエビデンスを添付します。"],
+      ["作業範囲を選ぶ", "複数工程にまたがる作業ではコーディネーターを使い、1 つの明確な成果物には下記の専門 Skill を呼び出します。"],
+      ["依頼内容を明確にする", "期待する結果、対象エンジンとプラットフォーム、制約、既存のエビデンス、受け入れ基準を説明します。"],
+      ["確認して許可する", "提案された計画または結果を確認し、実装、Commit、デプロイ、リリースを本当に行う場合にのみ明示的に許可します。"],
+    ],
+    examplesTitle: "依頼の例",
+    examplesLead: "次の形式をコピーし、プロジェクト固有の内容に置き換えてください。",
+    usageExamples: [
+      ["開発フロー全体", "$codex-game-studios:manage-game-development", "この Unity プロジェクトのインベントリ機能を計画し、技術設計を書き、最小のバーティカルスライスを実装して、エビデンスに基づく QA チェックを準備してください。"],
+      ["機能設計", "$codex-game-studios:design-game-feature", "三人称アクションゲームのスタミナシステムを設計してください。プレイヤーの判断、調整変数、境界ケース、受け入れ基準を含めてください。"],
+      ["レビューと QA", "$codex-game-studios:review-game-code", "このブランチのセーブシステム変更をレビューしてください。正確性とデータ損失リスクを優先し、該当ファイルを明記し、確認済みの指摘と未実行のチェックを分けてください。"],
+    ],
     coordinatorCommand: "開発フロー全体を調整",
     skillsTitle: "専門 Skill",
     commandHeading: "呼び出し",
@@ -356,6 +475,17 @@ export const content = {
       "게임 아이디어를 추적 가능한 디자인, 구현, 리뷰, QA 근거, 플레이테스트 학습 및 제작 계획으로 연결합니다.",
     intro:
       "claude-code-game-studios를 기반으로 재구성했으며 Claude 전용 역할 체계, 모델 등급, 훅 및 명령 전달 구조는 제거했습니다. 유용한 개발 수명 주기와 근거 원칙은 유지합니다.",
+    advantagesTitle: "특징과 장점",
+    advantagesLead:
+      "Codex를 위한 실용적인 게임 개발 시스템입니다. 하나의 작업에 집중할 수 있고, 콘셉트부터 출시 계획까지 프로젝트를 이어 갈 수 있도록 구조화되어 있습니다.",
+    advantages: [
+      ["Codex 네이티브", "Claude 전용 실행 구조를 유지하지 않고 Codex Skills, 프로젝트 근거, 명시적 승인을 중심으로 설계했습니다."],
+      ["전체 개발 수명 주기", "아이디어, 디자인, 기술 계획, 구현, 리뷰, QA, 플레이테스트 분석 및 제작 계획을 모두 다룹니다."],
+      ["주장보다 근거", "가정, 검증된 사실, NOT RUN 검사를 구분하여 테스트하지 않은 작업을 완료된 것으로 표현하지 않습니다."],
+      ["엔진 인식", "프로젝트 근거로 Unity, Unreal Engine 또는 Godot를 판별하고 하나의 적합한 어댑터를 로드하며, 브라우저 작업은 공식 전문 흐름으로 전달합니다."],
+      ["집중 또는 조정", "범위가 명확한 작업에는 하나의 전문 Skill을 사용하고, 여러 단계에는 조정 Skill을 사용하여 결정과 인수 기준을 유지합니다."],
+      ["기본적으로 안전", "읽기 전용 리뷰는 변경하지 않으며 Commit, 배포, 릴리스 및 기타 외부 변경에는 명확한 사용자 승인이 필요합니다."],
+    ],
     startLabel: "플러그인 설치",
     repositoryLabel: "저장소 보기",
     installTitle: "설치",
@@ -363,8 +493,21 @@ export const content = {
     marketplaceCommand: "마켓플레이스 추가",
     pluginCommand: "플러그인 설치",
     installNote: "설치 후 새 Skill이 검색되도록 새로운 Codex 작업을 시작하세요.",
-    useTitle: "사용법",
-    useLead: "범위가 넓은 개발 작업에는 조정 Skill을 사용하고, 경계가 명확한 작업에는 전문 Skill을 직접 호출합니다.",
+    useTitle: "사용 방법",
+    useLead: "원하는 결과를 자연어로 설명하고, 명시적으로 연결하고 싶을 때 Skill 이름을 추가하세요. 프로젝트 배경, 제약 조건 및 완료 기준도 제공하세요.",
+    workflowSteps: [
+      ["올바른 프로젝트 열기", "게임 저장소에서 새 Codex 작업을 시작하거나 관련 디자인, 코드, 로그, 스크린샷 및 플레이테스트 근거를 첨부합니다."],
+      ["작업 범위 선택", "여러 단계에 걸친 작업에는 조정 Skill을 사용합니다. 하나의 명확한 결과물에는 아래 전문 Skill을 호출합니다."],
+      ["요청 내용 작성", "원하는 결과, 대상 엔진과 플랫폼, 제약 조건, 기존 근거 및 인수 기준을 설명합니다."],
+      ["검토 후 승인", "제안된 계획이나 결과를 확인합니다. 실제 수행을 원할 때만 구현, Commit, 배포 또는 릴리스를 명시적으로 승인합니다."],
+    ],
+    examplesTitle: "요청 예시",
+    examplesLead: "아래 형식을 복사한 뒤 자신의 프로젝트 세부 정보로 바꾸세요.",
+    usageExamples: [
+      ["전체 작업 흐름", "$codex-game-studios:manage-game-development", "이 Unity 프로젝트의 인벤토리 기능을 계획하고, 기술 설계를 작성하고, 최소 버티컬 슬라이스를 구현한 뒤 근거 기반 QA 검사를 준비해 주세요."],
+      ["기능 디자인", "$codex-game-studios:design-game-feature", "3인칭 액션 게임의 스태미나 시스템을 디자인해 주세요. 플레이어 선택, 튜닝 변수, 경계 사례 및 인수 기준을 포함해 주세요."],
+      ["리뷰와 QA", "$codex-game-studios:review-game-code", "이 브랜치의 저장 시스템 변경 사항을 리뷰해 주세요. 정확성과 데이터 손실 위험을 우선하고, 정확한 파일을 인용하며, 검증된 결과와 실행하지 않은 검사를 구분해 주세요."],
+    ],
     coordinatorCommand: "전체 개발 흐름 조정",
     skillsTitle: "전문 Skill",
     commandHeading: "호출",
@@ -485,6 +628,44 @@ function render(locale) {
     )
     .join("");
 
+  const advantageCards = strings.advantages
+    .map(
+      ([title, description], index) => `
+        <article class="advantage-card">
+          <span class="card-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
+          <h3>${title}</h3>
+          <p>${description}</p>
+        </article>
+      `,
+    )
+    .join("");
+
+  const workflowSteps = strings.workflowSteps
+    .map(
+      ([title, description], index) => `
+        <li class="workflow-step">
+          <span class="step-number" aria-hidden="true">${index + 1}</span>
+          <div>
+            <h3>${title}</h3>
+            <p>${description}</p>
+          </div>
+        </li>
+      `,
+    )
+    .join("");
+
+  const usageExamples = strings.usageExamples
+    .map(
+      ([title, skill, prompt]) => `
+        <article class="example-card">
+          <p class="example-label">${title}</p>
+          <code>${skill}</code>
+          <p class="example-prompt">“${prompt}”</p>
+        </article>
+      `,
+    )
+    .join("");
+
   const safetyItems = strings.safetyItems.map((item) => `<li>${item}</li>`).join("");
   const repositoryItems = repositoryPaths
     .map(
@@ -517,6 +698,12 @@ function render(locale) {
       </div>
     </section>
 
+    <section class="panel">
+      <h2>${strings.advantagesTitle}</h2>
+      <p class="section-lead">${strings.advantagesLead}</p>
+      <div class="advantage-grid">${advantageCards}</div>
+    </section>
+
     <section id="install" class="panel">
       <h2>${strings.installTitle}</h2>
       <p class="section-lead">${strings.installLead}</p>
@@ -530,9 +717,13 @@ function render(locale) {
     <section class="panel">
       <h2>${strings.useTitle}</h2>
       <p class="section-lead">${strings.useLead}</p>
+      <ol class="workflow-list">${workflowSteps}</ol>
       <div class="command-grid">
         ${commandCard(strings.coordinatorCommand, "coordinator")}
       </div>
+      <h3>${strings.examplesTitle}</h3>
+      <p class="section-lead section-lead-compact">${strings.examplesLead}</p>
+      <div class="example-grid">${usageExamples}</div>
       <h3>${strings.skillsTitle}</h3>
       <div class="table-scroll">
         <table>

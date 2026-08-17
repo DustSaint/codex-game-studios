@@ -1,6 +1,6 @@
 # Codex Game Studios
 
-[Multilingual website](https://dustsaint.github.io/codex-game-studios/)
+**Website and multilingual guide:** [dustsaint.github.io/codex-game-studios](https://dustsaint.github.io/codex-game-studios/)
 
 ![Codex Game Studios banner](assets/branding/codex-game-studios-banner-minimal.png)
 

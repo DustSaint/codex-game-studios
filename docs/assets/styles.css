@@ -290,6 +290,134 @@ h3 {
   color: var(--ink-soft);
 }
 
+.section-lead-compact {
+  margin-top: -0.35rem;
+}
+
+.advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.advantage-card {
+  position: relative;
+  min-height: 190px;
+  padding: 1.15rem;
+  overflow: hidden;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.advantage-card:nth-child(3n + 1) {
+  box-shadow: inset 0 5px 0 var(--teal);
+}
+
+.advantage-card:nth-child(3n + 2) {
+  box-shadow: inset 0 5px 0 var(--purple);
+}
+
+.advantage-card:nth-child(3n) {
+  box-shadow: inset 0 5px 0 var(--yellow);
+}
+
+.advantage-card h3 {
+  position: relative;
+  margin: 1.3rem 0 0.45rem;
+}
+
+.advantage-card p {
+  position: relative;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.card-index {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.8rem;
+  color: rgba(36, 51, 59, 0.12);
+  font-size: 3rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.workflow-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workflow-step {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1rem;
+  background: rgba(220, 233, 202, 0.42);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.step-number {
+  display: grid;
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  color: var(--paper-strong);
+  background: var(--ink);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.workflow-step h3 {
+  margin: 0.15rem 0 0.35rem;
+}
+
+.workflow-step p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.example-card {
+  min-width: 0;
+  padding: 1rem;
+  color: #edf7f2;
+  background: var(--ink);
+  border-radius: var(--radius-md);
+}
+
+.example-label {
+  margin: 0 0 0.6rem;
+  color: var(--aqua);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.example-card code {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #f6db7b;
+  font-weight: 750;
+}
+
+.example-prompt {
+  margin: 0.85rem 0 0;
+  color: #dce9e4;
+}
+
 .command-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -470,8 +598,14 @@ td code,
     justify-content: flex-end;
   }
 
+  .advantage-grid,
+  .example-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .command-grid,
-  .engine-grid {
+  .engine-grid,
+  .workflow-list {
     grid-template-columns: 1fr;
   }
 }
@@ -509,6 +643,11 @@ td code,
   .hero,
   .panel {
     border-radius: 18px;
+  }
+
+  .advantage-grid,
+  .example-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-image {
