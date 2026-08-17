@@ -2,6 +2,13 @@
 
 **Website and multilingual guide:** [dustsaint.github.io/codex-game-studios](https://dustsaint.github.io/codex-game-studios/)
 
+[English](https://dustsaint.github.io/codex-game-studios/?lang=en) ·
+[简体中文](https://dustsaint.github.io/codex-game-studios/?lang=zh-CN) ·
+[Русский](https://dustsaint.github.io/codex-game-studios/?lang=ru) ·
+[Deutsch](https://dustsaint.github.io/codex-game-studios/?lang=de) ·
+[日本語](https://dustsaint.github.io/codex-game-studios/?lang=ja) ·
+[한국어](https://dustsaint.github.io/codex-game-studios/?lang=ko)
+
 ![Codex Game Studios banner](assets/branding/codex-game-studios-banner-minimal.png)
 
 Codex Game Studios is a Codex-native game-development framework adapted from
