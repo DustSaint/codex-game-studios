@@ -30,20 +30,20 @@ For broad game-development work, call the coordinator explicitly:
 $codex-game-studios:manage-game-development
 ```
 
-### 常用调用
+### 常用调用 / Common Invocations
 
-| 调用 | 用途 |
-| --- | --- |
-| `$codex-game-studios:brainstorm-game-concept` | 游戏创意 |
-| `$codex-game-studios:design-game` | 整体玩法与系统设计 |
-| `$codex-game-studios:design-game-feature` | 单个功能规格 |
-| `$codex-game-studios:write-game-technical-design` | 技术方案与架构 |
-| `$codex-game-studios:implement-game-feature` | 实现功能 |
-| `$codex-game-studios:review-game-design` | 评审设计 |
-| `$codex-game-studios:review-game-code` | 评审代码 |
-| `$codex-game-studios:plan-game-qa` | 测试计划 |
-| `$codex-game-studios:analyze-game-playtests` | 分析试玩反馈 |
-| `$codex-game-studios:plan-game-production` | 里程碑与制作计划 |
+| 调用 / Invocation | 中文说明 | English description |
+| --- | --- | --- |
+| `$codex-game-studios:brainstorm-game-concept` | 游戏创意 | Game concept ideation |
+| `$codex-game-studios:design-game` | 整体玩法与系统设计 | Whole-game and systems design |
+| `$codex-game-studios:design-game-feature` | 单个功能规格 | Bounded feature specification |
+| `$codex-game-studios:write-game-technical-design` | 技术方案与架构 | Technical design and architecture |
+| `$codex-game-studios:implement-game-feature` | 实现功能 | Feature implementation |
+| `$codex-game-studios:review-game-design` | 评审设计 | Game-design review |
+| `$codex-game-studios:review-game-code` | 评审代码 | Game-code review |
+| `$codex-game-studios:plan-game-qa` | 测试计划 | QA planning |
+| `$codex-game-studios:analyze-game-playtests` | 分析试玩反馈 | Playtest feedback analysis |
+| `$codex-game-studios:plan-game-production` | 里程碑与制作计划 | Milestones and production planning |
 
 Natural-language requests can trigger the matching skill automatically when its
 scope is clear.
