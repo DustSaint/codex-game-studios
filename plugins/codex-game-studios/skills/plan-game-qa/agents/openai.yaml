@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Game QA"
+  short_description: "Plan game testing, regression coverage, and evidence"
+  default_prompt: "Use $plan-game-qa to map this feature or milestone to a practical QA evidence plan."

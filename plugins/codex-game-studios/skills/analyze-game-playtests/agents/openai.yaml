@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Game Playtests"
+  short_description: "Turn playtest observations into prioritized design actions"
+  default_prompt: "Use $analyze-game-playtests to analyze these playtest notes or metrics."

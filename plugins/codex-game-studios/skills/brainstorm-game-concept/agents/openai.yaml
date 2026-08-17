@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brainstorm Game Concept"
+  short_description: "Shape a game idea into a scoped and testable concept"
+  default_prompt: "Use $brainstorm-game-concept to turn this idea into a focused, testable game concept."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Game Production"
+  short_description: "Plan game milestones, slices, stories, estimates, and risks"
+  default_prompt: "Use $plan-game-production to turn this approved scope into a production plan."

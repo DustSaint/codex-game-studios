@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Game"
+  short_description: "Specify game systems, interactions, balance, and experience"
+  default_prompt: "Use $design-game to create or revise the requested game-system design."

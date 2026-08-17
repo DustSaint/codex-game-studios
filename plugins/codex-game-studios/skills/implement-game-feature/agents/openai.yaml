@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Game Feature"
+  short_description: "Implement one ready game feature with tests and evidence"
+  default_prompt: "Use $implement-game-feature to deliver this scoped game feature and verify it."

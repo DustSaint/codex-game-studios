@@ -1,0 +1,13 @@
+{
+    "name": "ForwardTest.Gameplay.EditModeTests",
+    "rootNamespace": "ForwardTest.Gameplay.Tests",
+    "references": [
+        "ForwardTest.Gameplay"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

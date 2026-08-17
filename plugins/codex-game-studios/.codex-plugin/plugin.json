@@ -1,0 +1,40 @@
+{
+  "name": "codex-game-studios",
+  "version": "0.1.0",
+  "description": "A Codex-native framework for game concept, design, technical planning, implementation, review, QA, playtest analysis, and production planning.",
+  "author": {
+    "name": "Donchitos and Codex Game Studios contributors",
+    "url": "https://github.com/donchitos/claude-code-game-studios"
+  },
+  "homepage": "https://github.com/DustSaint/codex-game-studios",
+  "repository": "https://github.com/DustSaint/codex-game-studios",
+  "license": "MIT",
+  "keywords": [
+    "game-development",
+    "game-design",
+    "unity",
+    "unreal",
+    "godot",
+    "qa",
+    "playtesting",
+    "production"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Game Studios",
+    "shortDescription": "Plan, build, review, and validate games",
+    "longDescription": "Run a traceable game-development workflow from concept and system design through engine-aware technical delivery, QA evidence, playtest learning, and production planning.",
+    "developerName": "Codex Game Studios contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/DustSaint/codex-game-studios",
+    "defaultPrompt": [
+      "Inspect this game project and recommend the next bounded workflow",
+      "Turn this game idea into a testable concept and feature plan",
+      "Review this game feature from design through QA evidence"
+    ]
+  }
+}

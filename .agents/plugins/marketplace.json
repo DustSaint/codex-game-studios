@@ -1,0 +1,20 @@
+{
+  "name": "codex-game-studios",
+  "interface": {
+    "displayName": "Codex Game Studios"
+  },
+  "plugins": [
+    {
+      "name": "codex-game-studios",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-game-studios"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

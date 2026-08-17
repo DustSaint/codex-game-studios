@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Game Technical Design"
+  short_description: "Design game architecture, data flow, APIs, and decisions"
+  default_prompt: "Use $write-game-technical-design to produce an engine-aware technical design for this feature."

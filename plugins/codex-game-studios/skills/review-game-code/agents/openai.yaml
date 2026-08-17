@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Game Code"
+  short_description: "Review game code for runtime, lifecycle, and engine risks"
+  default_prompt: "Use $review-game-code to perform a game-specific review of this code."

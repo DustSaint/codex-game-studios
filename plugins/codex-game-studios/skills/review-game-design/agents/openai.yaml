@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Game Design"
+  short_description: "Review game designs for consistency, scope, and testability"
+  default_prompt: "Use $review-game-design to inspect these design artifacts and report actionable findings."

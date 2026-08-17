@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Game Development"
+  short_description: "Orient and route a game project through its next workflow"
+  default_prompt: "Use $manage-game-development to inspect this game project and recommend the next bounded workflow."

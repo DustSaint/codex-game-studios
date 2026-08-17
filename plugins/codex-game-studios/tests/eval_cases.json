@@ -1,0 +1,314 @@
+[
+  {
+    "id": "orchestrate_unity_vertical_slice",
+    "prompt": "We have a Unity prototype with one playable room and a rough combat loop. Turn this into a practical vertical-slice plan, tell me which artifacts to create, and sequence the work through implementation and validation.",
+    "expected_skill": "plan-game-production",
+    "expected_behavior": [
+      "Inspect the Unity project and identify the current development stage from repository evidence.",
+      "Select the artifacts needed to close concept or design gaps and sequence technical design, delivery, review, QA, and playtest work only where needed.",
+      "Expose assumptions, decision points, and validation gates without creating unnecessary process artifacts."
+    ],
+    "must_not": [
+      "Treat a repository marker as proof that the prototype is already a validated vertical slice.",
+      "Duplicate implementation work that belongs to a routed specialist skill."
+    ],
+    "engine": "unity",
+    "route": "production-planning"
+  },
+  {
+    "id": "brainstorm_vague_game_seed",
+    "prompt": "I only have a mood: lonely radio operator, endless rain, and callers who may not be human. Help me find a game in that idea before we choose an engine.",
+    "expected_skill": "brainstorm-game-concept",
+    "expected_behavior": [
+      "Turn the mood into several distinct player fantasies and core-loop candidates.",
+      "Compare scope, risks, and prototype hypotheses before recommending a direction.",
+      "Keep the output engine-agnostic and identify the smallest concept validation experiment."
+    ],
+    "must_not": [
+      "Invent an engine choice or implementation architecture.",
+      "Present an untested concept as a production commitment."
+    ],
+    "engine": "unknown",
+    "route": "plugin-native"
+  },
+  {
+    "id": "brainstorm_constrained_mobile_concept",
+    "prompt": "Brainstorm a one-thumb mobile game for five-minute sessions, a two-person team, and a three-month prototype budget. I need three concepts and a reasoned recommendation.",
+    "expected_skill": "brainstorm-game-concept",
+    "expected_behavior": [
+      "Use the audience, input, session-length, team, and schedule constraints to shape the concepts.",
+      "Give each concept a core loop, differentiator, scope risk, and cheap validation test.",
+      "Recommend one concept while preserving the evidence and tradeoffs behind the choice."
+    ],
+    "must_not": [
+      "Expand the request into a full production plan.",
+      "Assume monetization or platform services that the user did not request."
+    ],
+    "engine": "unknown",
+    "route": "plugin-native"
+  },
+  {
+    "id": "design_core_loop_and_systems",
+    "prompt": "The chosen concept is a co-op salvage game where noise attracts creatures. Write a coherent game design covering the core loop, player decisions, failure and recovery, progression, and the dependency map between systems.",
+    "expected_skill": "design-game",
+    "expected_behavior": [
+      "Define the player fantasy, loop cadence, rules, resources, failure states, and progression as one coherent design.",
+      "Map system dependencies, feedback cycles, tuning surfaces, and cross-system risks.",
+      "State open questions and measurable design assumptions."
+    ],
+    "must_not": [
+      "Turn the design request into engine-specific code architecture.",
+      "Hide contradictions between the progression and failure systems."
+    ],
+    "route": "plugin-native"
+  },
+  {
+    "id": "design_live_economy_rebalance",
+    "prompt": "Redesign our crafting economy because players hoard rare ore and ignore common drops. Cover sources, sinks, recipes, progression pacing, dominant strategies, formulas, and telemetry we should watch.",
+    "expected_skill": "design-game",
+    "expected_behavior": [
+      "Model sources, sinks, stockpiles, conversion paths, and progression gates before changing values.",
+      "Identify dominant strategies and propose tunable formulas with scenario checks.",
+      "Connect balance hypotheses to telemetry and playtest evidence."
+    ],
+    "must_not": [
+      "Patch one reward number without addressing the economy loop that causes hoarding.",
+      "Claim balance is solved without simulation or player evidence."
+    ],
+    "route": "plugin-native"
+  },
+  {
+    "id": "design_bounded_lock_on_feature",
+    "prompt": "Design a lock-on targeting feature for our Unity action game. Define player intent, states, camera and input interactions, edge cases, accessibility, acceptance criteria, and handoff notes, but do not implement it yet.",
+    "expected_skill": "design-game-feature",
+    "expected_behavior": [
+      "Produce a bounded feature brief with rules, state transitions, dependencies, edge cases, feedback, and acceptance criteria.",
+      "Separate player-facing behavior from later engine-specific implementation choices.",
+      "Call out unresolved interactions with camera, input, target validity, and accessibility."
+    ],
+    "must_not": [
+      "Broaden the request into a redesign of the entire combat system.",
+      "Edit source code when the user explicitly requested design only."
+    ],
+    "engine": "unity",
+    "route": "plugin-native"
+  },
+  {
+    "id": "technical_design_unity_save_migration",
+    "prompt": "Create the technical design for adding versioned save-game migrations to this Unity project. Include ownership, data flow, schema evolution, failure behavior, observability, test seams, rollout, and an architecture decision record. No implementation yet.",
+    "expected_skill": "write-game-technical-design",
+    "expected_behavior": [
+      "Detect the Unity version and existing persistence boundaries before proposing architecture.",
+      "Define ownership, migration ordering, atomicity, recovery behavior, APIs, and test seams.",
+      "Record alternatives, consequences, risks, and validation in an architecture decision."
+    ],
+    "must_not": [
+      "Write implementation code before confirming the current save format and constraints.",
+      "Use version-specific Unity APIs without verifying them against the detected project version."
+    ],
+    "engine": "unity",
+    "route": "engine-adapter"
+  },
+  {
+    "id": "technical_design_unreal_replication",
+    "prompt": "Our Unreal project needs server-authoritative ability activation with client prediction. Produce a technical design that fits the existing modules, replication model, rollback needs, security boundaries, and automated test strategy.",
+    "expected_skill": "write-game-technical-design",
+    "expected_behavior": [
+      "Inspect the Unreal project structure and version before selecting engine mechanisms.",
+      "Define authority, prediction, reconciliation, data ownership, module boundaries, and failure modes.",
+      "Make uncertainty and required engine documentation checks explicit."
+    ],
+    "must_not": [
+      "Assume a networking framework or module layout that is not evidenced in the repository.",
+      "Confuse a technical design with completed, tested implementation."
+    ],
+    "engine": "unreal",
+    "route": "engine-adapter"
+  },
+  {
+    "id": "implement_unity_inventory_feature",
+    "prompt": "Implement the approved stack-splitting feature in our Unity inventory using the existing feature brief and architecture decision. Add proportionate tests and show the validation evidence.",
+    "expected_skill": "implement-game-feature",
+    "expected_behavior": [
+      "Read the approved design, architecture, repository guidance, and current Unity version before editing.",
+      "Reuse existing inventory logic and implement the smallest coherent change at the correct ownership boundary.",
+      "Run relevant automated checks and report manual Unity validation that remains outstanding."
+    ],
+    "must_not": [
+      "Silently change the approved feature behavior to simplify implementation.",
+      "Report editor or play-mode behavior as verified when it was not run."
+    ],
+    "engine": "unity",
+    "route": "engine-adapter"
+  },
+  {
+    "id": "implement_godot_interaction_feature",
+    "prompt": "Implement hold-to-interact in this Godot project. It must reuse the current interaction component, preserve controller remapping, expose progress feedback, and include tests or a concrete manual validation checklist.",
+    "expected_skill": "implement-game-feature",
+    "expected_behavior": [
+      "Detect the Godot project version and inspect the existing interaction and input ownership before editing.",
+      "Extend reusable logic instead of duplicating an interaction path.",
+      "Validate input cancellation, target changes, scene lifecycle, and progress feedback."
+    ],
+    "must_not": [
+      "Create a second interaction system beside the existing reusable component.",
+      "Mask lifecycle errors with defensive checks that leave ownership unresolved."
+    ],
+    "engine": "godot",
+    "route": "engine-adapter"
+  },
+  {
+    "id": "review_cross_document_design",
+    "prompt": "Review the combat, progression, and economy design documents together. Find contradictions, missing ownership, broken formulas, scope risks, and places where the player fantasy is not supported. Do not rewrite the documents yet.",
+    "expected_skill": "review-game-design",
+    "expected_behavior": [
+      "Trace shared terms, resources, formulas, dependencies, and player outcomes across all supplied documents.",
+      "Rank findings by player impact and implementation risk with direct evidence.",
+      "Separate confirmed inconsistencies from questions that require designer judgment."
+    ],
+    "must_not": [
+      "Rewrite source documents when the request is review-only.",
+      "Treat personal preference as a confirmed design defect."
+    ],
+    "route": "plugin-native"
+  },
+  {
+    "id": "review_unreal_gameplay_code",
+    "prompt": "Review this Unreal enemy-spawner change. Focus on frame cost, object lifecycle, authority, state ownership, pooling, failure paths, and testability. Give actionable findings only; do not modify the branch.",
+    "expected_skill": "review-game-code",
+    "expected_behavior": [
+      "Inspect the diff in repository context and apply Unreal-aware lifecycle and authority checks.",
+      "Report only evidence-backed findings with severity, location, consequence, and a fundamental fix direction.",
+      "Call out validation gaps separately from code defects."
+    ],
+    "must_not": [
+      "Modify code during a review-only request.",
+      "List generic style preferences as defects without a concrete game-runtime consequence."
+    ],
+    "engine": "unreal",
+    "route": "engine-adapter"
+  },
+  {
+    "id": "qa_plan_unity_save_upgrade",
+    "prompt": "Build a QA plan for the Unity save migration before release. Cover old-version fixtures, corrupted and interrupted writes, platform storage differences, rollback, smoke checks, regression scope, and evidence required for sign-off.",
+    "expected_skill": "plan-game-qa",
+    "expected_behavior": [
+      "Create a risk-based matrix spanning migration paths, failure injection, platforms, recovery, and regression.",
+      "Separate automated checks, editor or device checks, and release sign-off evidence.",
+      "Trace every critical risk to an observable pass criterion."
+    ],
+    "must_not": [
+      "Claim tests were executed when the request is to plan them.",
+      "Reduce save integrity validation to a happy-path smoke test."
+    ],
+    "engine": "unity",
+    "route": "engine-adapter"
+  },
+  {
+    "id": "qa_plan_engine_unknown_multiplayer",
+    "prompt": "Plan validation for a multiplayer reconnect feature, but the repository snapshot does not reveal the engine yet. I need risk coverage, test levels, network conditions, regression areas, and the evidence bar for release.",
+    "expected_skill": "plan-game-qa",
+    "expected_behavior": [
+      "Plan engine-neutral coverage for state continuity, authority, timing, packet loss, retries, and recovery.",
+      "Mark engine-dependent test harness details as unresolved until project evidence is available.",
+      "Define reproducible evidence and release criteria without inventing execution results."
+    ],
+    "must_not": [
+      "Guess the engine or its testing APIs.",
+      "Turn a QA-planning request into feature implementation."
+    ],
+    "engine": "unknown",
+    "route": "plugin-native"
+  },
+  {
+    "id": "analyze_moderated_playtest_notes",
+    "prompt": "Analyze these notes from eight moderated sessions of our tutorial. Cluster recurring friction, distinguish observation from interpretation, rank issues by confidence and impact, and recommend the next experiments.",
+    "expected_skill": "analyze-game-playtests",
+    "expected_behavior": [
+      "Normalize the supplied observations and group recurring behaviors without losing session traceability.",
+      "Separate evidence, interpretation, confidence, and product implication.",
+      "Prioritize actions and experiments while preserving minority but high-impact findings."
+    ],
+    "must_not": [
+      "Invent participant quotes, counts, or behavior absent from the notes.",
+      "Treat every player request as a direct implementation requirement."
+    ],
+    "route": "plugin-native"
+  },
+  {
+    "id": "analyze_playtest_telemetry_mismatch",
+    "prompt": "Players say the boss is unfair, but completion telemetry looks healthy. Analyze the interview summaries, death locations, retry counts, loadouts, and session exits to explain the mismatch and propose follow-up tests.",
+    "expected_skill": "analyze-game-playtests",
+    "expected_behavior": [
+      "Triangulate qualitative and quantitative evidence instead of choosing one source by default.",
+      "Test alternative explanations such as survivorship, frustration cost, segment differences, and telemetry blind spots.",
+      "Recommend targeted follow-up observations or instrumentation tied to the remaining uncertainty."
+    ],
+    "must_not": [
+      "Declare the boss balanced from aggregate completion rate alone.",
+      "Change balance values before identifying which hypothesis the evidence supports."
+    ],
+    "route": "plugin-native"
+  },
+  {
+    "id": "plan_vertical_slice_production",
+    "prompt": "Turn the approved vertical-slice scope into a twelve-week production plan for six people. Define milestones, epics, story slices, dependencies, capacity assumptions, review gates, QA time, risks, and weekly status signals.",
+    "expected_skill": "plan-game-production",
+    "expected_behavior": [
+      "Build milestone and story structure from approved scope and dependency order.",
+      "Make capacity, ownership, integration, review, QA, and contingency assumptions visible.",
+      "Define measurable exit criteria and status signals that expose schedule risk early."
+    ],
+    "must_not": [
+      "Present estimates as commitments without stating assumptions and uncertainty.",
+      "Implement features while producing the schedule."
+    ],
+    "route": "plugin-native"
+  },
+  {
+    "id": "route_browser_game_to_official_stack",
+    "prompt": "Build a Phaser browser prototype of a two-player arena, add keyboard controls and a compact HUD, then run a browser playtest and fix the obvious interaction problems.",
+    "expected_skill": "manage-game-development",
+    "expected_behavior": [
+      "Recognize this as a browser-game implementation request.",
+      "Hand off implementation, UI, and browser playtesting to the installed official game-studio skill family.",
+      "Use this plugin only for complementary design or production work that the official browser workflow does not cover."
+    ],
+    "must_not": [
+      "Duplicate the official browser-game implementation and playtest workflow inside this plugin.",
+      "Route the Phaser project through a Unity, Unreal, or Godot adapter."
+    ],
+    "engine": "browser",
+    "route": "official-game-studio-handoff"
+  },
+  {
+    "id": "implementation_engine_detection_first",
+    "prompt": "Implement the approved checkpoint respawn feature in this repository. I do not know which engine it uses, so inspect the project and follow its existing conventions before changing anything.",
+    "expected_skill": "implement-game-feature",
+    "expected_behavior": [
+      "Run evidence-based project detection before selecting an engine workflow.",
+      "Inspect the existing respawn ownership, lifecycle, tests, and repository guidance before editing.",
+      "Ask for clarification if evidence remains ambiguous enough to change the implementation approach."
+    ],
+    "must_not": [
+      "Choose an engine or framework without repository evidence.",
+      "Add parallel respawn logic instead of extending the established ownership boundary."
+    ],
+    "engine": "unknown",
+    "route": "engine-detection-first"
+  },
+  {
+    "id": "no_match_investor_email_translation",
+    "prompt": "Translate this investor update email into Japanese and keep the tone formal. It is about our fundraising timeline, not game development.",
+    "expected_skill": null,
+    "expected_behavior": [
+      "Do not invoke the game-development plugin for an unrelated translation task.",
+      "Handle the request with a more appropriate general or language capability."
+    ],
+    "must_not": [
+      "Force the email into a game design, production, or implementation workflow.",
+      "Create game-development artifacts for an explicitly unrelated request."
+    ],
+    "route": "no-match"
+  }
+]

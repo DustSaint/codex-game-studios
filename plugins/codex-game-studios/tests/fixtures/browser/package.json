@@ -1,0 +1,11 @@
+{
+  "name": "browser-game-fixture",
+  "private": true,
+  "dependencies": {
+    "phaser": "fixture",
+    "three": "fixture"
+  },
+  "devDependencies": {
+    "@react-three/fiber": "fixture"
+  }
+}

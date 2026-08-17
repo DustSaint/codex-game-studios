@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Game Feature"
+  short_description: "Create an implementation-ready game feature contract"
+  default_prompt: "Use $design-game-feature to define this feature behavior, boundaries, and acceptance criteria."
