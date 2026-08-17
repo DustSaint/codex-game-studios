@@ -1,6 +1,8 @@
 # Codex Game Studios
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[English](README.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
+![Codex Game Studios banner](assets/branding/codex-game-studios-banner.png)
 
 Codex Game Studios is a Codex-native game-development framework adapted from
 [`donchitos/claude-code-game-studios`](https://github.com/donchitos/claude-code-game-studios).
@@ -49,6 +51,21 @@ $codex-game-studios:manage-game-development
 
 Natural-language requests can trigger the matching skill automatically when its
 scope is clear.
+
+## Supported engines
+
+| Runtime | Support |
+| --- | --- |
+| Unity | Native adapter for technical design, feature implementation, code review, engine lifecycle, and verification guidance |
+| Unreal Engine | Native adapter for technical design, feature implementation, code review, engine lifecycle, and verification guidance |
+| Godot | Native adapter for technical design, feature implementation, code review, engine lifecycle, and verification guidance |
+| Browser games | Detects browser projects and routes framework-specific work to installed Game Studio Skills for Phaser 2D, Three.js/WebGL, or React Three Fiber |
+| Unknown or conflicting markers | Remains engine-neutral and requests the missing project evidence instead of guessing |
+
+Concept, game-design, and feature-design work stays engine-agnostic unless an
+engine constraint changes player-facing behavior. Technical workflows derive the
+engine version from project files and verify unstable APIs against official
+documentation for that version.
 
 ## Safety model
 

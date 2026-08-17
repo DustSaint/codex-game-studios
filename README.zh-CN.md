@@ -1,6 +1,8 @@
 # Codex Game Studios
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[English](README.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
+![Codex Game Studios 横幅](assets/branding/codex-game-studios-banner.png)
 
 Codex Game Studios 是一个从
 [`donchitos/claude-code-game-studios`](https://github.com/donchitos/claude-code-game-studios)
@@ -47,6 +49,19 @@ $codex-game-studios:manage-game-development
 | `$codex-game-studios:plan-game-production` | 里程碑与制作计划 |
 
 当需求范围足够明确时，也可以直接使用自然语言描述任务，让 Codex 自动选择匹配的 Skill。
+
+## 支持的引擎
+
+| 运行环境 | 支持方式 |
+| --- | --- |
+| Unity | 内置原生适配器，覆盖技术设计、功能实现、代码评审、引擎生命周期和验证指导 |
+| Unreal Engine | 内置原生适配器，覆盖技术设计、功能实现、代码评审、引擎生命周期和验证指导 |
+| Godot | 内置原生适配器，覆盖技术设计、功能实现、代码评审、引擎生命周期和验证指导 |
+| 浏览器游戏 | 识别浏览器项目，并将框架相关工作交给已安装的 Phaser 2D、Three.js/WebGL 或 React Three Fiber Game Studio Skill |
+| 未知或标记冲突的项目 | 保持引擎中立并请求缺失的项目证据，不会猜测引擎 |
+
+游戏创意、整体设计和功能设计默认保持引擎中立，除非引擎限制会改变玩家可观察到的行为。
+技术流程会从项目文件中确定引擎版本，并根据该版本的官方文档核实不稳定的 API。
 
 ## 安全与范围
 
