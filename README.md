@@ -1,5 +1,7 @@
 # Codex Game Studios
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 Codex Game Studios is a Codex-native game-development framework adapted from
 [`donchitos/claude-code-game-studios`](https://github.com/donchitos/claude-code-game-studios).
 It preserves the useful game-development behavior while replacing Claude-specific
@@ -30,20 +32,20 @@ For broad game-development work, call the coordinator explicitly:
 $codex-game-studios:manage-game-development
 ```
 
-### 常用调用 / Common Invocations
+### Common invocations
 
-| 调用 / Invocation | 中文说明 | English description |
-| --- | --- | --- |
-| `$codex-game-studios:brainstorm-game-concept` | 游戏创意 | Game concept ideation |
-| `$codex-game-studios:design-game` | 整体玩法与系统设计 | Whole-game and systems design |
-| `$codex-game-studios:design-game-feature` | 单个功能规格 | Bounded feature specification |
-| `$codex-game-studios:write-game-technical-design` | 技术方案与架构 | Technical design and architecture |
-| `$codex-game-studios:implement-game-feature` | 实现功能 | Feature implementation |
-| `$codex-game-studios:review-game-design` | 评审设计 | Game-design review |
-| `$codex-game-studios:review-game-code` | 评审代码 | Game-code review |
-| `$codex-game-studios:plan-game-qa` | 测试计划 | QA planning |
-| `$codex-game-studios:analyze-game-playtests` | 分析试玩反馈 | Playtest feedback analysis |
-| `$codex-game-studios:plan-game-production` | 里程碑与制作计划 | Milestones and production planning |
+| Invocation | Purpose |
+| --- | --- |
+| `$codex-game-studios:brainstorm-game-concept` | Game concept ideation |
+| `$codex-game-studios:design-game` | Whole-game and systems design |
+| `$codex-game-studios:design-game-feature` | Bounded feature specification |
+| `$codex-game-studios:write-game-technical-design` | Technical design and architecture |
+| `$codex-game-studios:implement-game-feature` | Feature implementation |
+| `$codex-game-studios:review-game-design` | Game-design review |
+| `$codex-game-studios:review-game-code` | Game-code review |
+| `$codex-game-studios:plan-game-qa` | QA planning |
+| `$codex-game-studios:analyze-game-playtests` | Playtest feedback analysis |
+| `$codex-game-studios:plan-game-production` | Milestones and production planning |
 
 Natural-language requests can trigger the matching skill automatically when its
 scope is clear.
