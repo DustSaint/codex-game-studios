@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
-![Codex Game Studios バナー](assets/branding/codex-game-studios-banner.png)
+![Codex Game Studios バナー](assets/branding/codex-game-studios-banner-minimal.png)
 
 Codex Game Studios は、
 [`donchitos/claude-code-game-studios`](https://github.com/donchitos/claude-code-game-studios)

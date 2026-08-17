@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
-![Баннер Codex Game Studios](assets/branding/codex-game-studios-banner.png)
+![Баннер Codex Game Studios](assets/branding/codex-game-studios-banner-minimal.png)
 
 Codex Game Studios — это нативный для Codex фреймворк разработки игр,
 адаптированный из
