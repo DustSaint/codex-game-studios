@@ -26,6 +26,11 @@ Restate the observable behavior, acceptance criteria, affected systems, content 
 
 If no implementation-ready design exists for a cross-cutting or high-risk change, use `$write-game-technical-design` first. Do not smuggle an architectural decision into an incidental code edit.
 
+For data schemas, gameplay or AI, networking, UI, rendering, prototypes, or
+test infrastructure, load only the applicable section of
+[specialized-runtime-checks.md](../../references/specialized-runtime-checks.md).
+Use project-owned requirements and measured budgets, not imported defaults.
+
 ## Implement Coherently
 
 1. Trace the runtime path from input or trigger through state mutation, presentation, persistence, and cleanup.

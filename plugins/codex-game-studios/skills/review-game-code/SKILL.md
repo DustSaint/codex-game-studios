@@ -17,6 +17,9 @@ Review behavior, not just syntax. Prioritize defects that can break player state
    - Godot: [godot-workflow.md](../../references/godot-workflow.md)
 4. For browser projects, review the actual framework conventions and, when deeper framework context is needed, route that portion to the matching installed `$game-studio` family skill. Do not load a native-engine adapter.
 5. Use [review-rubrics.md](../../references/review-rubrics.md) for severity and [qa-evidence.md](../../references/qa-evidence.md) to judge verification claims.
+6. If the scope includes data schemas, gameplay or AI, networking, UI,
+   rendering, prototypes, or test infrastructure, load only the matching
+   section of [specialized-runtime-checks.md](../../references/specialized-runtime-checks.md).
 
 If the review base or intended behavior is ambiguous, state the ambiguity and obtain confirmation rather than guessing.
 

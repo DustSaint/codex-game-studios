@@ -11,6 +11,11 @@ Turn requirements and risks into a traceable QA plan. Treat planning, execution,
 
 Read [QA evidence rules](../../references/qa-evidence.md) before assigning statuses or defining a quality gate. Use [the QA plan template](../../assets/templates/qa-plan.md) when creating a durable plan.
 
+When coverage includes data schemas, gameplay or AI, networking, UI,
+rendering, prototypes, or test infrastructure, load only the applicable
+section of [specialized-runtime-checks.md](../../references/specialized-runtime-checks.md)
+and turn its relevant risks into observable evidence.
+
 ## Build the Plan
 
 1. Establish the test target.

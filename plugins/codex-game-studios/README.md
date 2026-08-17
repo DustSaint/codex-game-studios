@@ -38,5 +38,6 @@ at commit `984023ddac0d5e27624f2baacde6105e45de375f`. It removes the source runt
 static role hierarchy, model tiers, command handoffs, and automatic hooks while
 retaining its useful game-development lifecycle and evidence discipline.
 
-See `docs/CODEX_MIGRATION_PLAN.md` for the complete 73-skill mapping and
+See `docs/CODEX_MIGRATION_PLAN.md` for the complete 73-skill mapping,
+`docs/OFFICIAL_MIGRATION_AUDIT.md` for the OpenAI `migrate-to-codex` audit, and
 `docs/CODEX_PORT_REPORT.md` for validation results.

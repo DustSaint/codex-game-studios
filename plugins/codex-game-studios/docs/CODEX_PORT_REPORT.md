@@ -1,4 +1,4 @@
-# Codex Game Studios v0.1 Port Report
+# Codex Game Studios v0.1.1 Port Report
 
 Date: 2026-08-17
 Status: validated Codex-native public release
@@ -45,6 +45,22 @@ Audited surface:
 - 46 version-sensitive engine reference files
 
 The original MIT license and an adaptation notice are included in the package.
+
+## Official migration audit
+
+The follow-up audit ran OpenAI's official `migrate-to-codex` skill and CLI at
+commit `49f948faa9258a0c61caceaf225e179651397431` against the audited upstream
+source in an isolated target. It generated 73 skill files and 49 custom-agent
+files, but reported 123 semantic items requiring manual repair. Its syntax
+validator passed the generated structure; that does not make the mechanical
+output behaviorally equivalent or suitable for distribution.
+
+The audit confirmed that the existing 11-skill architecture is the appropriate
+Codex-native destination. It also found that the official inventory does not
+enumerate the source's 11 scoped rule files. Their reusable behavior is now
+covered by `references/specialized-runtime-checks.md` and loaded selectively by
+technical design, implementation, code review, and QA. See
+`OFFICIAL_MIGRATION_AUDIT.md` for commands, findings, dispositions, and limits.
 
 ## Architectural decisions
 

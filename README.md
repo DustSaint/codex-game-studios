@@ -90,7 +90,8 @@ documentation for that version.
 - `.agents/plugins/marketplace.json` — Codex marketplace manifest
 - `plugins/codex-game-studios` — complete plugin package
 - `plugins/codex-game-studios/docs/CODEX_MIGRATION_PLAN.md` — source-to-Codex mapping
+- `plugins/codex-game-studios/docs/OFFICIAL_MIGRATION_AUDIT.md` — official OpenAI migration audit and dispositions
 - `plugins/codex-game-studios/docs/CODEX_PORT_REPORT.md` — validation and security report
 
-The current release is `0.1.0`, adapted from upstream commit
+The current release is `0.1.1`, adapted from upstream commit
 `984023ddac0d5e27624f2baacde6105e45de375f` and distributed under the MIT License.

@@ -30,6 +30,12 @@ If markers conflict or no engine can be established, remain engine-neutral and i
 
 Treat versions and APIs as repository-derived facts. Verify unstable engine details in the official documentation for the detected version.
 
+When the change touches data schemas, gameplay or AI, networking, UI, rendering,
+prototypes, or test infrastructure, load only the matching section of
+[specialized-runtime-checks.md](../../references/specialized-runtime-checks.md).
+Derive constraints from the target project instead of inheriting fixed budgets
+or conventions from an unrelated game.
+
 ## Design the System
 
 Describe the smallest architecture that satisfies the behavior and fits existing boundaries:
